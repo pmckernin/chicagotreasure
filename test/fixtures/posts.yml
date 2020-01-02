@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  description: MyText
+  date_lost: 2020-01-02
+  location_lost: MyString
+  gps: MyString
+
+two:
+  user_id: 1
+  description: MyText
+  date_lost: 2020-01-02
+  location_lost: MyString
+  gps: MyString
