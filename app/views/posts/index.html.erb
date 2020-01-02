@@ -2,33 +2,30 @@
 
 <h1>Posts</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>Description</th>
-      <th>Date lost</th>
-      <th>Location lost</th>
-      <th>Gps</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="card-columns">
+  
+  
 
-  <tbody>
+
+ 
     <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.user_id %></td>
-        <td><%= post.description %></td>
-        <td><%= post.date_lost %></td>
-        <td><%= post.location_lost %></td>
-        <td><%= post.gps %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+
+      <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title"><%= post.description %></h5>
+        <h6 class="card-subtitle mb-2 text-muted"><%= post.location_lost %></h6>
+        <p class="card-text">Lost on <%= post.date_lost %></p>
+        <a href="posts/<%=post.id%>" class="card-link">More Details</a>
+        
+      </div>
+    </div>
+      
+    
+        <td><%#= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      
     <% end %>
-  </tbody>
-</table>
+    </div>
+
 
 <br>
 
